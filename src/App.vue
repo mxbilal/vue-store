@@ -1,12 +1,9 @@
 <script setup>
-import AddData from './components/AddData.vue';
-import DataTable from './components/DataTable.vue';
 </script>
 
 <template>
-  <AddData />
-  <br />
-  <DataTable />
+  <router-view>
+  </router-view>
 </template>
 
 <style scoped></style>

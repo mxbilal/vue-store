@@ -1,13 +1,10 @@
 <template>
-  <v-sheet width="300" class="mx-auto">
-    <v-form fast-fail @submit.prevent="submitForm">
-      <v-text-field v-model="firstName" label="First name" :rules="firstNameRules"></v-text-field>
+  <v-form fast-fail @submit.prevent="submitForm">
+    <input v-model="firstName" label="First name" />
 
-      <v-text-field v-model="lastName" label="Last name" :rules="lastNameRules"></v-text-field>
-
-      <v-btn type="submit" block class="mt-2">Submit</v-btn>
-    </v-form>
-  </v-sheet>
+    <input v-model="lastName" label="Last name" />
+    <button type="submit" block class="mt-2">Submit</button>
+  </v-form>
 </template>
 <script>
 import { mapMutations } from 'vuex';
@@ -42,9 +39,6 @@ export default {
       // Call the 'addName' mutation to add the new name to the store
       this.addName(newName);
 
-      // Clear the form fields after submission
-      this.firstName = '';
-      this.lastName = '';
     },
   }
 }

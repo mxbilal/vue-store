@@ -1,5 +1,5 @@
 <template>
-  <v-table>
+  <v-table fixed-header height="300px" :items-per-page="5">
     <thead>
       <tr>
         <th class="text-left">
@@ -17,6 +17,7 @@
       </tr>
     </tbody>
   </v-table>
+  <!-- <v-pagination v-model="page" :length="namesList.length / 5" rounded="circle"></v-pagination> -->
 </template>
 <script>
 import { mapState } from 'vuex';
